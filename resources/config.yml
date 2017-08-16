@@ -1,0 +1,5 @@
+---
+#Amount of time in seconds to refresh the FloatingTexts
+time: 5
+#End of the useless config file
+...

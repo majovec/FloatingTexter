@@ -1,0 +1,10 @@
+name: FloatingTexter
+author: Fycarman
+version: 1
+main: FloatingTexter\Main
+api: [3.0.0, 3.0.0-ALPHA6]
+description: "A simple plugin to spawn FloatingTexts around the worlds. Thanks to @TheNewHEROBRINEX and @luca28pet for helping me with some problems."
+commands:
+   floatingtext:
+       aliases: [ft, floatingtexter]
+       description: "FloatingTexter's main command"
