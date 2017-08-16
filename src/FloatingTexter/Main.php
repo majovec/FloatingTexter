@@ -5,7 +5,6 @@ namespace FloatingTexter;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\entity\Entity;
-use pocketmine\event\Listener;
 use pocketmine\nbt\tag\CompoundTag;
 use pocketmine\nbt\tag\DoubleTag;
 use pocketmine\nbt\tag\FloatTag;
@@ -14,11 +13,10 @@ use pocketmine\Player;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
 
-class Main extends PluginBase implements Listener{
+class Main extends PluginBase{
 
     public function onEnable(){
         $this->saveDefaultConfig();
-        $this->getServer()->getPluginManager()->registerEvents($this, $this);
         Entity::registerEntity(FloatingText::class, true);
         $this->getServer()->getScheduler()->scheduleRepeatingTask(new RefreshTask($this), $this->getConfig()->get("time") * 20);
         $this->getLogger()->info(TextFormat::GREEN . "FloatingTexter by Fycarman enabled!");
