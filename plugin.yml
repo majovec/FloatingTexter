@@ -8,3 +8,7 @@ commands:
    floatingtext:
        aliases: [ft, floatingtexter]
        description: "FloatingTexter's main command"
+permission:
+   floatingtexter.use:
+       default: op
+       description: "Allow to use /ft command"
